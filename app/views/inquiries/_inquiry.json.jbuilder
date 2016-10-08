@@ -1,0 +1,2 @@
+json.extract! inquiry, :id, :first_name, :last_name, :DOB, :street, :city, :state, :zip, :insurance_carrier, :member_id, :policy_holder, :policy_holder_name, :policy_holder_dob, :insurance_phone_number, :created_at, :updated_at
+json.url inquiry_url(inquiry, format: :json)

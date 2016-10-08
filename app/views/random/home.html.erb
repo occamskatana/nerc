@@ -20,7 +20,7 @@
 				<hr class="light">
 				<p class="text-faded">Our complimentary services include everything from intervention to insurance verification to placement. One call can have you or a loved one on the road to recovery in as little as one hour, at no cost</p>
 				<a href="tel:8002791455" class="page-scroll btn btn-default btn-xl sr-button">(800) 279-1455</a> OR
-				<a href="#" class="page-scroll btn btn-default btn-xl sr-button">Verify Insurance</a>
+				<a href="<%= new_inquiry_path %>" class="page-scroll btn btn-default btn-xl sr-button">Verify Insurance</a>
 			</div>
 		</div>
 	</div>
@@ -67,7 +67,10 @@
 		</div>
 	</div>
 </section>
-<section class="no-padding" id="portfolio">
+<section class="no-padding bg-dark">
+<br>
+<h2 class="section-heading" align="center">Our Assessment Process</h2>
+				<hr class="light">
 	<div class="container-fluid">
 		<div class="row no-gutter popup-gallery">
 			<div class="col-lg-4 col-sm-6">
@@ -76,10 +79,10 @@
 					<div class="portfolio-box-caption">
 						<div class="portfolio-box-caption-content">
 							<div class="project-category text-faded">
-								Category
+								Initial Contact
 							</div>
 							<div class="project-name">
-								Project Name
+								We gather information about your history of using alcohol and/or drugs, previous alcohol and drug treatment you may have had, your risk of future problem use, and significant medical concerns.
 							</div>
 						</div>
 					</div>
@@ -91,10 +94,10 @@
 					<div class="portfolio-box-caption">
 						<div class="portfolio-box-caption-content">
 							<div class="project-category text-faded">
-								Category
+								Verify Patient Insurance Benefits
 							</div>
 							<div class="project-name">
-								Project Name
+								It’s important to verify insurance eligibility before providing any care. Failing to do so could leave you with an unpaid claim by the insurance company or a patient unable to pay their bill in a timely manner. We at NETC will help to get your insurance benfits verified at NO COST.
 							</div>
 						</div>
 					</div>
@@ -106,10 +109,10 @@
 					<div class="portfolio-box-caption">
 						<div class="portfolio-box-caption-content">
 							<div class="project-category text-faded">
-								Category
+								Assessment of Needs
 							</div>
 							<div class="project-name">
-								Project Name
+								After learning about your needs, we will assess what services to provide. Services include Intervention, Detox, and inpatient treatment. 
 							</div>
 						</div>
 					</div>
@@ -121,10 +124,10 @@
 					<div class="portfolio-box-caption">
 						<div class="portfolio-box-caption-content">
 							<div class="project-category text-faded">
-								Category
+								Placement
 							</div>
 							<div class="project-name">
-								Project Name
+								Your personal history and circumstances make your addiction unique to you. We create a treatment plan tailored for you and your addiction, and will focus on making you educated and strong enough - in mind & body - to be well.
 							</div>
 						</div>
 					</div>
@@ -136,10 +139,10 @@
 					<div class="portfolio-box-caption">
 						<div class="portfolio-box-caption-content">
 							<div class="project-category text-faded">
-								Category
+								Travel
 							</div>
 							<div class="project-name">
-								Project Name
+								Getting to treatment can sometimes be the hardest part of becoming well. We help to arrange travel (if required) via air, trains, or other means of transportation. 
 							</div>
 						</div>
 					</div>
@@ -147,14 +150,14 @@
 			</div>
 			<div class="col-lg-4 col-sm-6">
 				<a href="<%= url_to_image('fullsize/6.jpg') %>" class="portfolio-box">
-					<img src="<%= url_to_image('thumbnails/6.jpg') %>" class="img-responsive" alt="">
+					<img src="<%= url_to_image('thumbnails/6.jpg') %>" class="img-responsive grid" alt="">
 					<div class="portfolio-box-caption">
 						<div class="portfolio-box-caption-content">
 							<div class="project-category text-faded">
-								Category
+								Inpatient
 							</div>
 							<div class="project-name">
-								Project Name
+								The patient receives the help he or she deserves, and is on their way to a healthy happy life.
 							</div>
 						</div>
 					</div>
@@ -166,8 +169,8 @@
 <aside class="bg-dark">
 	<div class="container text-center">
 		<div class="call-to-action">
-			<h2>Free Download at Start Bootstrap!</h2>
-			<a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">Download Now!</a>
+			<h2>Help is a Click Away</h2>
+			<a href="tel:8002791455" class="btn btn-default btn-xl sr-button">Call Now</a>
 		</div>
 	</div>
 </aside>
@@ -177,15 +180,16 @@
 			<div class="col-lg-8 col-lg-offset-2 text-center">
 				<h2 class="section-heading">Let's Get In Touch!</h2>
 				<hr class="primary">
-				<p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+				<p>Ready to get help us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
 			</div>
 			<div class="col-lg-4 col-lg-offset-2 text-center">
-				<i class="fa fa-phone fa-3x sr-contact"></i>
-				<p>123-456-6789</p>
+			<a href="tel:8002791455"><i class="fa fa-phone fa-3x sr-contact"></i><br>(800) 279-1455</a>
 			</div>
+			<br>
+			<p align="center">Can't Call Right Now?
+			</p>
 			<div class="col-lg-4 text-center">
-				<i class="fa fa-envelope-o fa-3x sr-contact"></i>
-				<p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
+				<p><a href="mailto:your-email@your-domain.com"><i class="fa fa-envelope-o fa-3x sr-contact"></i><br>Verify Benefits</a></p>
 			</div>
 		</div>
 	</div>

@@ -1,0 +1,23 @@
+<%= simple_form_for(@inquiry) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :DOB %>
+    <%= f.input :street %>
+    <%= f.input :city %>
+    <%= f.input :state %>
+    <%= f.input :zip %>
+    <%= f.input :insurance_carrier %>
+    <%= f.input :member_id %>
+    <%= f.input :policy_holder %>
+    <%= f.input :policy_holder_name %>
+    <%= f.input :policy_holder_dob %>
+    <%= f.input :insurance_phone_number %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

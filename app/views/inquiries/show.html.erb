@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @inquiry.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @inquiry.last_name %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @inquiry.DOB %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @inquiry.street %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @inquiry.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @inquiry.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @inquiry.zip %>
+</p>
+
+<p>
+  <strong>Insurance carrier:</strong>
+  <%= @inquiry.insurance_carrier %>
+</p>
+
+<p>
+  <strong>Member:</strong>
+  <%= @inquiry.member_id %>
+</p>
+
+<p>
+  <strong>Policy holder:</strong>
+  <%= @inquiry.policy_holder %>
+</p>
+
+<p>
+  <strong>Policy holder name:</strong>
+  <%= @inquiry.policy_holder_name %>
+</p>
+
+<p>
+  <strong>Policy holder dob:</strong>
+  <%= @inquiry.policy_holder_dob %>
+</p>
+
+<p>
+  <strong>Insurance phone number:</strong>
+  <%= @inquiry.insurance_phone_number %>
+</p>
+
+<%= link_to 'Edit', edit_inquiry_path(@inquiry) %> |
+<%= link_to 'Back', inquiries_path %>
