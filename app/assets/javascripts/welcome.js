@@ -1,3 +1,4 @@
+
 (function($) {
     // Initialize and Configure Magnific Popup Lightbox Plugin
     $(document).ready(function(){
@@ -15,7 +16,6 @@
                 tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
             }
         });
-    })
 
     "use strict"; // Start of use strict
 
@@ -62,5 +62,10 @@
         scale: 0.3,
         distance: '0px'
     }, 300);
+    })
 
-})(jQuery); // End of use strict
+ 
+
+})(jQuery);
+
+ // End of use strict
