@@ -1,5 +1,18 @@
-<h1>New Inquiry</h1>
+<header id="new-inquiry-header">
+	<div class="header-content">
+		<div class="header-content-inner">
+			<h1>Verify Insurance</h1>
+			<hr id="new-inquiry-hr">
+			<p>Enter your information below. In accordance with our privacy policy, your information will never be released.</p>
+	</div>
+</header>
 
-<%= render 'form', inquiry: @inquiry %>
+<div class="row">
+	<div class="col-lg-8 col-lg-offset-2">
+		<%= render 'form', inquiry: @inquiry %>
+	</div>
+</div>
+
+
 
 <%= link_to 'Back', inquiries_path %>

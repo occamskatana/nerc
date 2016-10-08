@@ -15,5 +15,4 @@
 //= require turbolinks
 //= require bootstrap
 //= require scrollreveal.min.js
-//= require welcome.js
 //= require_tree 
