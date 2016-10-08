@@ -31,6 +31,10 @@ gem 'shoulda'
 gem 'rspec-rails'
 gem 'factory_girl_rails'
 gem 'simple_form'
+gem 'client_side_validations', github: 'DavyJonesLocker/client_side_validations', branch: 'rails5'
+gem 'client_side_validations-simple_form', 
+    github: 'DavyJonesLocker/client_side_validations-simple_form', 
+    branch: 'rails5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -40,6 +44,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sqlite3'
   gem 'rails-controller-testing'
+  gem 'annotate'
 end
 
 group :development do

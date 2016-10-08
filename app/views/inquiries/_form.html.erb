@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-lg-8 col-lg-offset-2 form">
-    <%= simple_form_for(@inquiry) do |f| %>
+    <%= simple_form_for @inquiry, validate: true, authenticity_token: true, id: 'inquiry-form-basic', remote: true do |f| %>
       <%= f.error_notification %>
 
       <div class="form-inputs">
         <%= f.input :first_name %>
         <%= f.input :last_name %>
-        <%= f.input :DOB %>
+        <%= f.input :DOB, label: "Date of Birth" %>
         <%= f.input :street %>
         <%= f.input :city %>
         <%= f.input :state %>
@@ -15,8 +15,8 @@
         <%= f.input :member_id %>
         <%= f.input :policy_holder %>
         <%= f.input :policy_holder_name %>
-        <%= f.input :policy_holder_dob %>
-        <%= f.input :insurance_phone_number %>
+        <%= f.input :policy_holder_dob, label: "Policy Holder Date of Birth" %>
+        <%= f.input :insurance_phone_number, hint: 'Hint: 800 number on back of card' %>
       </div>
 
       <div class="form-actions" align="center">

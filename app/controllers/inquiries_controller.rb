@@ -28,8 +28,9 @@ class InquiriesController < ApplicationController
 
     respond_to do |format|
       if @inquiry.save
-        format.html { redirect_to @inquiry, notice: 'Inquiry was successfully created.' }
-        format.json { render :show, status: :created, location: @inquiry }
+        format.js{}
+        format.html { redirect_to root_path, notice: 'Inquiry was successfully created.' }
+        # format.json { render :show, status: :created, location: @inquiry }
       else
         format.html { render :new }
         format.json { render json: @inquiry.errors, status: :unprocessable_entity }
