@@ -24,7 +24,7 @@ RSpec.describe InquiriesController, type: :controller do
   # Inquiry. As you add validations to Inquiry, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {first_name: "John", last_name: "Carter", DOB: "2016-10-08", email: "sex@sex.com", street: "24 Greenway st", city: "Hamden", state: "Connecticut", zip: "06517", insurance_carrier: "", member_id: "", policy_holder: "", policy_holder_name: "", policy_holder_dob: "2016-10-08", insurance_phone_number: "5618708191"}
   }
 
   let(:invalid_attributes) {
@@ -59,13 +59,13 @@ RSpec.describe InquiriesController, type: :controller do
     end
   end
 
-  describe "GET #edit" do
-    it "assigns the requested inquiry as @inquiry" do
-      inquiry = Inquiry.create! valid_attributes
-      get :edit, params: {id: inquiry.to_param}, session: valid_session
-      expect(assigns(:inquiry)).to eq(inquiry)
-    end
-  end
+  # describe "GET #edit" do
+  #   it "assigns the requested inquiry as @inquiry" do
+  #     inquiry = Inquiry.create! valid_attributes
+  #     get :edit, params: {id: inquiry.to_param}, session: valid_session
+  #     expect(assigns(:inquiry)).to eq(inquiry)
+  #   end
+  # end
 
   describe "POST #create" do
     context "with valid params" do
@@ -83,63 +83,63 @@ RSpec.describe InquiriesController, type: :controller do
 
       it "redirects to the created inquiry" do
         post :create, params: {inquiry: valid_attributes}, session: valid_session
-        expect(response).to redirect_to(Inquiry.last)
+        expect(response).to redirect_to(root_path)
       end
     end
 
-    context "with invalid params" do
-      it "assigns a newly created but unsaved inquiry as @inquiry" do
-        post :create, params: {inquiry: invalid_attributes}, session: valid_session
-        expect(assigns(:inquiry)).to be_a_new(Inquiry)
-      end
+    # context "with invalid params" do
+    #   it "assigns a newly created but unsaved inquiry as @inquiry" do
+    #     post :create, params: {inquiry: invalid_attributes}, session: valid_session
+    #     expect(assigns(:inquiry)).to be_a_new(Inquiry)
+    #   end
 
-      it "re-renders the 'new' template" do
-        post :create, params: {inquiry: invalid_attributes}, session: valid_session
-        expect(response).to render_template("new")
-      end
-    end
+      # it "re-renders the 'new' template" do
+      #   post :create, params: {inquiry: invalid_attributes}, session: valid_session
+      #   expect(response).to render_template("new")
+      # end
+    # end
   end
 
-  describe "PUT #update" do
-    context "with valid params" do
-      let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
-      }
+  # describe "PUT #update" do
+  #   context "with valid params" do
+  #     let(:new_attributes) {
+  #       skip("Add a hash of attributes valid for your model")
+  #     }
 
-      it "updates the requested inquiry" do
-        inquiry = Inquiry.create! valid_attributes
-        put :update, params: {id: inquiry.to_param, inquiry: new_attributes}, session: valid_session
-        inquiry.reload
-        skip("Add assertions for updated state")
-      end
+  #     it "updates the requested inquiry" do
+  #       inquiry = Inquiry.create! valid_attributes
+  #       put :update, params: {id: inquiry.to_param, inquiry: new_attributes}, session: valid_session
+  #       inquiry.reload
+  #       skip("Add assertions for updated state")
+  #     end
 
-      it "assigns the requested inquiry as @inquiry" do
-        inquiry = Inquiry.create! valid_attributes
-        put :update, params: {id: inquiry.to_param, inquiry: valid_attributes}, session: valid_session
-        expect(assigns(:inquiry)).to eq(inquiry)
-      end
+  #     it "assigns the requested inquiry as @inquiry" do
+  #       inquiry = Inquiry.create! valid_attributes
+  #       put :update, params: {id: inquiry.to_param, inquiry: valid_attributes}, session: valid_session
+  #       expect(assigns(:inquiry)).to eq(inquiry)
+  #     end
 
-      it "redirects to the inquiry" do
-        inquiry = Inquiry.create! valid_attributes
-        put :update, params: {id: inquiry.to_param, inquiry: valid_attributes}, session: valid_session
-        expect(response).to redirect_to(inquiry)
-      end
-    end
+  #     it "redirects to the inquiry" do
+  #       inquiry = Inquiry.create! valid_attributes
+  #       put :update, params: {id: inquiry.to_param, inquiry: valid_attributes}, session: valid_session
+  #       expect(response).to redirect_to(inquiry)
+  #     end
+  #   end
 
-    context "with invalid params" do
-      it "assigns the inquiry as @inquiry" do
-        inquiry = Inquiry.create! valid_attributes
-        put :update, params: {id: inquiry.to_param, inquiry: invalid_attributes}, session: valid_session
-        expect(assigns(:inquiry)).to eq(inquiry)
-      end
+  #   context "with invalid params" do
+  #     it "assigns the inquiry as @inquiry" do
+  #       inquiry = Inquiry.create! valid_attributes
+  #       put :update, params: {id: inquiry.to_param, inquiry: invalid_attributes}, session: valid_session
+  #       expect(assigns(:inquiry)).to eq(inquiry)
+  #     end
 
-      it "re-renders the 'edit' template" do
-        inquiry = Inquiry.create! valid_attributes
-        put :update, params: {id: inquiry.to_param, inquiry: invalid_attributes}, session: valid_session
-        expect(response).to render_template("edit")
-      end
-    end
-  end
+  #     it "re-renders the 'edit' template" do
+  #       inquiry = Inquiry.create! valid_attributes
+  #       put :update, params: {id: inquiry.to_param, inquiry: invalid_attributes}, session: valid_session
+  #       expect(response).to render_template("edit")
+  #     end
+  #   end
+  # end
 
   describe "DELETE #destroy" do
     it "destroys the requested inquiry" do
