@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   root to: 'random#home'
   resources :inquiries
   get 'random/about'

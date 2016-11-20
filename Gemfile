@@ -35,6 +35,7 @@ gem 'client_side_validations', github: 'DavyJonesLocker/client_side_validations'
 gem 'client_side_validations-simple_form', 
     github: 'DavyJonesLocker/client_side_validations-simple_form', 
     branch: 'rails5'
+gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
