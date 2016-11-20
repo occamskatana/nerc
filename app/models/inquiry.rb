@@ -19,25 +19,31 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  email                  :string
+#  phone_number           :string
 #
 
 class Inquiry < ApplicationRecord
 
-	before_save {self.email = email.downcase}
+  has_many :notes
 
-	validates :first_name, presence: true, length: {minimum: 2, maximum: 200}
-	validates :last_name, presence: true, length: {minimum: 2, maximum: 200}
-	validates :DOB, presence: true
-	validates :street, presence: true 
-	validates :state, presence: true
-	validates :city, presence: true 
-	validates :zip, presence: true 
-	validates :email, presence: true
-	EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-zs]+\z/i
-	validates :email, format: EMAIL_REGEX
-	validates :email, length: {minimum: 3, maximum: 50}
+  before_save {self.email = email.downcase}
+
+  validates :first_name, presence: true, length: {minimum: 2, maximum: 200}
+  validates :last_name, presence: true, length: {minimum: 2, maximum: 200}
+  validates :DOB, presence: true
+  validates :street, presence: true
+  validates :state, presence: true
+  validates :city, presence: true
+  validates :zip, presence: true
+  validates :email, presence: true
+  EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-zs]+\z/i
+  validates :email, format: EMAIL_REGEX
+  validates :email, length: {minimum: 3, maximum: 50}
 
 
-	
-	
+  def mark_as_contacted
+    self.contacted += 1
+    self.save
+  end
+
 end

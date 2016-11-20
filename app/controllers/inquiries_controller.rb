@@ -12,6 +12,15 @@ class InquiriesController < ApplicationController
   def show
   end
 
+  def contact
+    @inquiry = Inquiry.find(params[:id])
+    @inquiry.mark_as_contacted
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
   # GET /inquiries/new
   def new
     @inquiry = Inquiry.new
@@ -63,13 +72,13 @@ class InquiriesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_inquiry
-      @inquiry = Inquiry.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_inquiry
+    @inquiry = Inquiry.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def inquiry_params
-      params.require(:inquiry).permit(:first_name, :last_name, :email, :DOB, :street, :city, :state, :zip, :insurance_carrier, :member_id, :policy_holder, :policy_holder_name, :policy_holder_dob, :insurance_phone_number)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def inquiry_params
+    params.require(:inquiry).permit(:first_name, :last_name, :email, :DOB, :street, :city, :state, :zip, :insurance_carrier, :member_id, :policy_holder, :policy_holder_name, :policy_holder_dob, :insurance_phone_number)
+  end
 end

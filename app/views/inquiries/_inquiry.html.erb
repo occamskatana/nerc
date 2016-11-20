@@ -1,0 +1,22 @@
+<div class="row inquiry-row">
+	<div class="col-md-5 inquiry-container">
+		<p><%= inquiry.first_name %> <%= inquiry.last_name %></p>
+		<p><%= inquiry.phone_number %> <%= inquiry.email %></p> 
+	</div>
+	<div class="col-md-4">
+		<% if !inquiry.notes.empty? %>
+			<p><%= inquiry.notes.last.body[0..100] + "..." %></p>
+			<p>By: <%= inquiry.notes.last.admin.full_name %></p>
+		<% else %>
+			<p>No Notes Yet</p>
+		<% end %>
+		
+	</div>
+	<div class="col-xs-3">
+		<a class="btn btn-success" href="<%= admins_show_path(inquiry.id) %>">Details</a>
+		<%= button_to 'Mark Contacted', contact_path(inquiry.id), class: 'btn btn-warning', remote: true %><br>
+		<p>Contacted:<span id="inquiry-<%= inquiry.id %>"> <%= inquiry.contacted %></span> times</p> 
+	</div>
+</div>
+<hr>
+

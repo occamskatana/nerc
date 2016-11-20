@@ -7,9 +7,10 @@ class Admin::SessionsController < Devise::SessionsController
   # end
 
   # POST /resource/sign_in
-  # def create
-  #   super
-  # end
+  def create
+    super
+    redirect_to :admininstraitons_index_page
+  end
 
   # DELETE /resource/sign_out
   # def destroy
